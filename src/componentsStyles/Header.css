@@ -1,0 +1,41 @@
+.headerCon{
+    max-width: 1150px;
+    margin: 20px auto;
+    padding: 0 auto;
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+        .headerLeft{
+            display: flex;
+            align-items: center;
+            .nav{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    text-decoration: none;
+                    list-style: none;
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: #000;
+                           font-size: x-large;
+                        }
+
+                    }
+                }
+            }
+        }
+        .headerRigth{
+            a{
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 30px;
+                font-size: x-large;
+            }
+        }
+    }
+}

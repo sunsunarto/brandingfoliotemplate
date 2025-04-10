@@ -1,0 +1,46 @@
+.mainEndingCon{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 0;
+    .context{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: start;
+        padding: 20px;
+        max-width: 450px;
+        border: 1px solid black;
+        border-radius: 20px;
+        height: 700px;
+        overflow: hidden;
+        .logo{
+            align-self: start;
+            width: 100px;
+        }
+        img{
+            width: 1000px;
+        }
+        h1{
+            font-size: 40px;
+        }
+    }  
+}
+.buyContent{
+    background-color: #146EF5;
+    color: white;
+    button{
+        background-color: white;
+        color: black;
+    }
+}
+.templates{
+    background-color: white;
+    color: black;
+    button{
+        background-color: #146EF5;
+        color: white;
+    }
+}

@@ -1,0 +1,65 @@
+.templateCon{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1150px;
+    h1{
+        font-size: 60px;
+    }
+    .templateContent{
+        margin-top: 20px;
+        .content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            .left{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                text-align: start;
+                justify-content: start;
+                padding: 20px;
+                img{
+                    width: 500px;
+                    border-radius: 20px;
+                    border: 1px solid black;
+                }
+                h1{
+                    font-size: 40px;
+                }
+                button{
+                    margin: 0;
+                }
+                .buttons{
+                    display: flex;
+                    justify-content: start;
+                    gap: 20px;
+                    .download{
+                        background-color: white;
+                        color: black;
+                    }
+                }
+            }
+            .right{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                text-align: start;
+                justify-content: end;
+                padding: 20px;
+                img{
+                    width: 500px;
+                    border-radius: 20px;
+                    border: 1px solid black;
+                }
+                h1{
+                    font-size: 40px;
+                }
+                button{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
