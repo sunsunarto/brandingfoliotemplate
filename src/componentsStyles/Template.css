@@ -21,7 +21,8 @@
                 justify-content: start;
                 padding: 20px;
                 img{
-                    width: 500px;
+                    width: 100%;
+                    max-width: 500px;
                     border-radius: 20px;
                     border: 1px solid black;
                 }
@@ -49,7 +50,8 @@
                 justify-content: end;
                 padding: 20px;
                 img{
-                    width: 500px;
+                    width: 100%;
+                    max-width: 500px;
                     border-radius: 20px;
                     border: 1px solid black;
                 }
@@ -62,4 +64,31 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .templateCon{
+        .templateContent{
+            .content{
+                flex-direction: column;
+                .left{
+                    img{
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                }
+                .right{
+                    img{
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+.index2, .index4{
+    flex-direction: column-reverse;
 }

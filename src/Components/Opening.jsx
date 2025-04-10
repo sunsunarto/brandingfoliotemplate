@@ -38,61 +38,32 @@ function Opening() {
             },
         })
     }, []);
-    
-    useEffect(() => { //group 1, 2 scroll
-        const group1 = group1Ref.current;
-        const group2 = group2Ref.current;
-
-        gsap.fromTo(group1, {
-            y: 0,
-        }, {
-            y: -200,
-            scrollTrigger: {
-                trigger: group1,
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-            },
-        });
-        gsap.fromTo(group2, {
-            y: -300,
-        }, {
-            y: 0,
-            scrollTrigger: {
-                trigger: group2,
-                start: "top center",
-                end: "bottom center",
-                scrub: true,
-            },
-        });
-    }, []);
 
     useEffect(() => {
         const group1 = group1Ref.current;
         const group2 = group2Ref.current;
 
         if (window.innerWidth <= 768) {
-            gsap.fromTo(group1, { x: 0 }, { 
-                x: -100,
-                scrollTrigger: {
-                    trigger: group1,
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: true,
-                },
+            gsap.fromTo(group1, { x: 0, y: 0 }, { 
+                x: -100, y: -100, 
+                scrollTrigger: { trigger: group1, start: "top center", end: "bottom center", scrub: true}
             });
 
-            gsap.fromTo(group2, { x: 0 }, { 
-                x: 100,
-                scrollTrigger: {
-                    trigger: group2,
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: true,
-                },
+            gsap.fromTo(group2, { x: 0, y: 0 }, { 
+                x: 100, y: 100, 
+                scrollTrigger: { trigger: group2, start: "top center", end: "bottom center", scrub: true }
+            });
+        } else {
+            gsap.fromTo(group1, { y: 0 }, { 
+                y: -200, scrollTrigger: { trigger: group1, start: "top center", end: "bottom center", scrub: true }
+            });
+
+            gsap.fromTo(group2, { y: -300 }, { 
+                y: 0, scrollTrigger: { trigger: group2, start: "top center", end: "bottom center", scrub: true }
             });
         }
     }, []);
+    
     return (
         <div className="openingCon">
             <div className="opening">

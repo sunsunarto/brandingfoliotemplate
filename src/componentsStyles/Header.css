@@ -5,7 +5,15 @@
     .header{
         display: flex;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        @media screen and (max-width: 450px) {
+            flex-direction: column;
+            align-items: start;
+        }
         .headerLeft{
             display: flex;
             align-items: center;
@@ -20,10 +28,18 @@
                         a{
                             text-decoration: none;
                             color: #000;
-                           font-size: x-large;
+                            font-size: x-large;
                         }
 
                     }
+                }
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: start;
+                }
+                @media screen and (max-width: 450px) {
+                    flex-direction: row;
+                    align-items: center;
                 }
             }
         }
@@ -39,3 +55,4 @@
         }
     }
 }
+
